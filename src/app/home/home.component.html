@@ -1,0 +1,44 @@
+<p>home works!</p>
+<h1>Template driven form</h1>
+<form #loginForm="ngForm"(ngSubmit)="userLogin(loginForm.value)">
+    <input type='name' name="name" placeholder="Enter Name" pattern="[a-zA-Z]+$" ngModel required #name="ngModel">
+    <br>
+    <span *ngIf="name.invalid && name.touched">Please Enter a Valid Input</span>
+    <br>
+
+    <input type='email' name="email" placeholder="Enter Email" ngModel required #email="ngModel" email>
+    <br>
+    <span *ngIf="email.invalid && email.touched">Please Enter a Valid Input</span>
+    <br>
+
+    <input type='password' name="password" placeholder="Enter Password" ngModel required #password="ngModel"
+        minlength="2" maxlength="6">
+    <br>
+    <span *ngIf="password.invalid && password.touched">Please Enter a Valid Input</span>
+    <br>
+    <button [disabled]="loginForm.invalid">Login</button>
+</form>
+
+<h1>Reactive form</h1>
+<form [formGroup]="loginForm2" (ngSubmit)="userLogin1(loginForm2.value)">
+    <input type="text" name="Name" placeholder="Enter Name" formControlName="user">
+    <br>
+    <span *ngIf="user && user.invalid && user.touched">
+        Please Enter a Valid Input
+    </span>
+    <br>
+    <input type="email" name="email" placeholder="Enter Email" formControlName="email">
+    <br>
+    <span *ngIf="email && email.invalid && email.touched">
+        Please Enter a Valid Input
+    </span>
+    <br>
+    <input type="email" name="password" placeholder="Enter Password" formControlName="password">
+    <br>
+    <span *ngIf="password && password.invalid && password.touched">
+        Please Enter a Valid Input
+    </span>
+    <br>
+    <button [disabled]="loginForm2.invalid">Login
+    </button>
+</form>
