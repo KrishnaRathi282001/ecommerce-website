@@ -13,6 +13,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ServicesComponent } from './services/services.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
+import { InvoiceComponent } from './invoice/invoice.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import { CustomerDetailComponent } from './customer-detail/customer-detail.compo
     BolgComponent,
     ContactComponent,
     ServicesComponent,
-    CustomerDetailComponent
+    CustomerDetailComponent,
+    InvoiceComponent
   ],
   imports: [
     BrowserModule,
