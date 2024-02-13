@@ -12,20 +12,16 @@ import { CustomerDetailComponent } from './customer-detail/customer-detail.compo
 
 const routes: Routes = [
   {
-  path:"home",
-  component: HomeComponent,
-  },
-  {
-    path:"project",
-    component:ProjectComponent
-  },
-  {
     path:"home",
     component: HomeComponent,
+    },
+  {
+    path:"project",
+    component:ProjectComponent,
   },
   {
-    path:"blog",
-    component:BolgComponent,
+    path:"bolg",
+    component: BolgComponent,
   },
   {
     path:"login",

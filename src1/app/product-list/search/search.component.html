@@ -1,0 +1,32 @@
+<!-- Search Result -->
+<div class="ekart--search--product">
+    <input type="text" class="ekart-search-product-input" [(ngModel)]="searchText">
+    <!-- <input class="ekart-search-product-input" [value]="searchText1" (input)="updateSearchText($event)"> -->
+    <button [ngClass]="{'btn': true, 'btn-search': searchText, 'btn-search-disabled':! searchText}"
+ [disabled]= "! searchText">Search</button>
+    
+ <!-- false Value
+ false, ' ', null, undefined, 0 other all true value 
+ -->
+</div>
+<div class="ekart-search-result-for">
+    <p *ngIf="searchText != ''">Search result for:<strong>{{searchText}}</strong></p>
+    <!-- <p>Search result for call back function :<strong>{{searchText1}}</strong></p> -->
+</div>
+
+<!-- if else -->
+<!-- <h1 *ngIf="show; then ifBlock else elseBlock"></h1>
+<ng-template #ifBlock>
+    <h1>If Condition</h1>
+</ng-template>
+<ng-template #elseBlock>
+    <h1>Else Condition </h1>
+</ng-template> -->
+<!-- Switch case -->
+<!-- <h1>Colors for h1 tag</h1>
+<div [ngSwitch]="token">
+    <h1 *ngSwitchCase="'red'" style="color: red;">Red</h1>
+    <h1 *ngSwitchCase="'green'" style="color: green;">Green</h1>
+    <h1 *ngSwitchCase="'blue'" style="color: blue;">Blue</h1>
+    <h1 *ngSwitchDefault>Unknown Color {{token}}</h1>
+</div> -->
